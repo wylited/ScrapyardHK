@@ -5,18 +5,17 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Scrapyard HK</title>
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js</a> on Docker!
+          Welcome to <a href="https://scrapyard.hackclub.com/">Scrapyard</a> on Docker!
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
+          Get started by signing up for scrapyard hk
+          <a href="https://scrapyard.fillout.com/hongkong?utm=website">on our website</a>
         </p>
 
         <div className={styles.grid}>
