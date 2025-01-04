@@ -34,6 +34,7 @@ export default function Home() {
       {isOpen && (
         <FilloutPopupEmbed
           filloutId="fopmQDDwgRus"
+          dynamicResize
           onClose={() => setIsOpen(false)}
         />
       )}
