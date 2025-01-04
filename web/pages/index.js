@@ -14,6 +14,8 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Head>
         <title>Scrapyard HK</title>
+        <meta name="description" content="Scrapyard HK Hackathon Website" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* Top bar */}
       <header className="w-full p-4 flex justify-end bg-background border-b">
