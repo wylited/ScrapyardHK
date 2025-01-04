@@ -1,66 +1,40 @@
+'use client'
+
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { FilloutPopupEmbed } from "@fillout/react"
+import "@fillout/react/style.css"
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
+  const [isOpen, setIsOpen] = useState(false)
+
+  return(
+    <div className="min-h-screen flex flex-col">
       <Head>
         <title>Scrapyard HK</title>
       </Head>
+      {/* Top bar */}
+      <header className="w-full p-4 flex justify-end bg-background border-b">
+        <Button variant="ghost">Login</Button>
+      </header>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://scrapyard.hackclub.com/">Scrapyard</a> on Docker!
-        </h1>
-
-        <p className={styles.description}>
-          Get started by signing up for scrapyard hk
-          <a href="https://scrapyard.fillout.com/hongkong?utm=website">on our website</a>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      {/* Main content */}
+      <main className="flex-grow flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Welcome to Our Hackathon</h1>
+          <Button size="lg" onClick={() => setIsOpen(true)}>Sign Up for Scrapyard</Button>
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      {/* Fillout Popup Embed */}
+      {isOpen && (
+        <FilloutPopupEmbed
+          filloutId="fopmQDDwgRus"
+          onClose={() => setIsOpen(false)}
+        />
+      )}
     </div>
-  );
+  )
 }
