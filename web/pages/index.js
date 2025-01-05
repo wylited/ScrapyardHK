@@ -5,6 +5,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import Hero from "@/components/hero"
 import Paper from "@/components/paper"
+import RundownSchedule from "@/components/rundown"
 import { FilloutPopupEmbed } from "@fillout/react"
 import "@fillout/react/style.css"
 
@@ -18,7 +19,6 @@ export default function Home() {
         <meta name="description" content="Scrapyard HK Hackathon Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Navbar isOpen={isOpen} setIsOpen={setIsOpen} /> */}
       <Hero isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <Paper title="The Scrapyard Calls" date="January 6, 2025" sub={Math.ceil((new Date(new Date().getFullYear(), 2, 15) - new Date()) / (1000 * 60 * 60 * 24)) + (new Date() > new Date(new Date().getFullYear(), 2, 15) ? 365 : 0) + " days left"}>
@@ -48,6 +48,20 @@ export default function Home() {
         <br/>
         <p className="font-bold">From the Scrapyard Hong Kong team...</p>
       </Paper>
+
+      <div className="flex items-center justify-center h-[80vh]">
+        <div className="text-5xl font-bold font-grotesk text-center flex flex-col justify-center max-w-3xl w-full h-full">
+          <p className="m-4">2 Day Rundown</p>
+          <iframe
+            src="https://calendar.google.com/calendar/embed?height=400&wkst=1&ctz=Asia%2FHong_Kong&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&showDate=0&showNav=0&title=Scrapyard%20HK&src=YzY3ZmE2YjE0OWU5Mzk2OGM1Y2ZmMmNiZjg3MTE0MDYwY2JhMGNiNGI4N2M3OGI3ZGNmZjFlMjkwNTkyNGI1M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E"
+            style={{ borderWidth: 0 }}
+            height="400"
+            className="h-full"
+            title="Scrapyard HK Calendar"
+          ></iframe>
+        </div>
+      </div>
+
       {/* Fillout Popup Embed */}
       {isOpen && (
         <FilloutPopupEmbed
