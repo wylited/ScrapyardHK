@@ -5,9 +5,9 @@ import { useEffect, useState } from "react"
 import Autoplay from "embla-carousel-autoplay"
 
 const BentoGrid = () => {
-    const items = ["Computer Science", "Engineering", "Design Technology"]
+    const items = ["Computer Science", "Engineering", "Design Technology",  "Robotics", "Machine Learning", "3D Modelling", "Animation", "Graphic Design", "Software Development", ]
     const [api, setApi] = useState<any>()
-    const plugin = Autoplay({ delay: 1500, stopOnInteraction: false })
+    const plugin = Autoplay({ delay: 1250, stopOnInteraction: false })
 
     return (
         <div className="max-w-6xl mx-auto p-4 font-phantom">
@@ -24,7 +24,7 @@ const BentoGrid = () => {
                 <CarouselContent>
                     {items.map((item, index) => (
                         <CarouselItem key={index} className="flex justify-center">
-                            <div className="text-white text-5xl font-bold flex items-center gap-4">
+                            <div className="text-white text-5xl font-bold flex items-center text-center gap-4">
                                 {item}
                             </div>
                         </CarouselItem>
@@ -33,7 +33,7 @@ const BentoGrid = () => {
             </Carousel>
 
             <div className="text-right text-white text-4xl font-bold mt-4">
-                students...
+                ...students
             </div>
         </div>
 
