@@ -11,6 +11,11 @@ module.exports = {
   ],
   theme: {
   	extend: {
+        fontFamily: {
+            mono: ['var(--font-jetbrains-mono)', 'monospace'],
+            phantom: ['var(--font-phantom-sans)', 'sans-serif'],
+            grotesk: ['var(--font-space-grotesk)', 'sans-serif'],
+        },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
