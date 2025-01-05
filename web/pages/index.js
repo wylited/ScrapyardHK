@@ -18,8 +18,53 @@ export default function Home() {
         <meta name="description" content="Scrapyard HK Hackathon Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+      {/* <Navbar isOpen={isOpen} setIsOpen={setIsOpen} /> */}
       <Hero isOpen={isOpen} setIsOpen={setIsOpen} />
+      <p>
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+        lorem ipsum
+      </p>
 
       {/* Fillout Popup Embed */}
       {isOpen && (

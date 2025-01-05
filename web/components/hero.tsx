@@ -20,12 +20,12 @@ export default function Hero({ isOpen, setIsOpen }) {
   return (
     <div className="relative h-screen overflow-hidden">
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 rounded-b-3xl"
         style={{
           backgroundImage: "url('/cutting-mat.png')",
           backgroundRepeat: 'no-repeat',
-          backgroundColor: '#337d78',
-          backgroundPosition: 'center',
+          backgroundColor: '#f2f2f2',
+          backgroundPosition: 'top',
           backgroundSize: 'contain',
           transform: `translateY(${scrollY * 0.5}px)`
         }}
@@ -33,7 +33,7 @@ export default function Hero({ isOpen, setIsOpen }) {
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
         <Image
-          src="/wordmark.png"
+          src="/wordmark.svg"
           alt="Hackathon Logo"
           width={500}
           height={100}
