@@ -37,20 +37,23 @@ export default function Hero({ isOpen, setIsOpen }) {
           alt="Hackathon Logo"
           width={500}
           height={100}
-          className="mb-4 drop-shadow-2xl"
+          className="mb-8 drop-shadow
+               transform hover:scale-105 transition-all duration-300
+               hover:drop-shadow-2xl
+               "
         />
 
         <div className="text-3xl md:text-4xl lg:text-5xl
                        font-phantom
                        font-extrabold text-center mx-16
-                       transform hover:scale-105 transition-transform duration-300
+                       transform hover:scale-105 transition-all duration-300 hover:drop-shadow-2xl
                        bg-clip-content
                        ">
           The <span className="text-red-400 bg-slate-900 rounded-md shadow-lg p-1">highschool hackathon</span> where your wacky ideas become <span className="text-blue-400 bg-slate-900 rounded-md shadow-lg p-1">wonderful inventions.</span>
         </div>
 
         <Button
-          className="font-phantom my-4 bg-yellow text-black hover:bg-red-300 hover:drop-shadow-2xl font-bold text-2xl md:text-3xl"
+          className="font-phantom my-8 bg-yellow text-black hover:bg-red-300 hover:drop-shadow-2xl font-bold text-2xl md:text-3xl"
           onClick={() => setIsOpen(true)}
         >
           Sign Up Now!
