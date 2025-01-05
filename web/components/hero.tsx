@@ -40,12 +40,14 @@ export default function Hero({ isOpen, setIsOpen }) {
           className="mb-4 drop-shadow-2xl"
         />
 
-        <h1 className="text-3xl md:text-4xl lg:text-5xl
+        <div className="text-3xl md:text-4xl lg:text-5xl
+                       font-phantom
                        font-extrabold text-center mx-16
                        transform hover:scale-105 transition-transform duration-300
+                       bg-clip-content
                        ">
-          The<span className="text-red-400 font-phantom bg-slate-900 rounded-md"> highschool hackathon </span>where your wacky ideas become<span className="text-blue-400 bg-slate-900 rounded-md"> wonderful inventions. </span>
-        </h1>
+          The <span className="text-red-400 bg-slate-900 rounded-md shadow-lg p-1">highschool hackathon</span> where your wacky ideas become <span className="text-blue-400 bg-slate-900 rounded-md shadow-lg p-1">wonderful inventions.</span>
+        </div>
 
         <Button
           className="font-phantom my-4 bg-yellow text-black hover:bg-red-300 hover:drop-shadow-2xl font-bold text-2xl md:text-3xl"
