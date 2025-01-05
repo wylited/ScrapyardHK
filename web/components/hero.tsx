@@ -44,11 +44,11 @@ export default function Hero({ isOpen, setIsOpen }) {
                        font-extrabold text-center mx-16
                        transform hover:scale-105 transition-transform duration-300
                        ">
-          The <span className="text-red-400 font-phantom">highschool hackathon</span> where your wacky ideas become <span className="text-blue-400">wonderful inventions</span>
+          The<span className="text-red-400 font-phantom bg-slate-900 rounded-md"> highschool hackathon </span>where your wacky ideas become<span className="text-blue-400 bg-slate-900 rounded-md"> wonderful inventions. </span>
         </h1>
 
         <Button
-          className="font-phantom my-2 bg-yellow text-black hover:bg-red-300 hover:drop-shadow-2xl font-bold text-2xl md:text-3xl"
+          className="font-phantom my-4 bg-yellow text-black hover:bg-red-300 hover:drop-shadow-2xl font-bold text-2xl md:text-3xl"
           onClick={() => setIsOpen(true)}
         >
           Sign Up Now!
