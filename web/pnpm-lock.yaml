@@ -11,6 +11,9 @@ importers:
       '@fillout/react':
         specifier: ^1.1.2
         version: 1.1.2
+      '@fontsource/space-grotesk':
+        specifier: ^5.1.1
+        version: 5.1.1
       '@radix-ui/react-slot':
         specifier: ^1.1.1
         version: 1.1.1(@types/react@19.0.2)(react@18.3.1)
@@ -72,6 +75,9 @@ packages:
 
   '@fillout/react@1.1.2':
     resolution: {integrity: sha512-XyzLY74Zhxxwym3A9770Tb3NINwaaWyWwvaw1lMJ5sA/P6hgsdzvefUOqohzR3+KVyspvBOR4BoR0nBMPFd/Vw==}
+
+  '@fontsource/space-grotesk@5.1.1':
+    resolution: {integrity: sha512-6uOS8WhMEl6lbykGvkSjxRLs/1lDvfSKyXAau7ONVPzUYBmB1E+JQ3C0du7NDp75xUZ+330xPc9/ep8uFgIXBg==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -863,6 +869,8 @@ snapshots:
     optional: true
 
   '@fillout/react@1.1.2': {}
+
+  '@fontsource/space-grotesk@5.1.1': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:

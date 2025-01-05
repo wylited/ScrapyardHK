@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "@fillout/react/style.css";
+import "@fontsource/space-grotesk/index.css";
 
 import posthog from "posthog-js"
 import { PostHogProvider } from 'posthog-js/react'
@@ -14,6 +15,23 @@ if (typeof window !== 'undefined') { // checks that we are client-side
     },
   })
 }
+
+import { JetBrains_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
+
+// JetBrains Mono from Google Fonts
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono'
+})
+
+import { Space_Grotesk } from 'next/font/google'
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk'
+})
+
 
 export default function App(
     { Component, pageProps: { session, ...pageProps } }
