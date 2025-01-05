@@ -20,52 +20,9 @@ export default function Home() {
       </Head>
       {/* <Navbar isOpen={isOpen} setIsOpen={setIsOpen} /> */}
       <Hero isOpen={isOpen} setIsOpen={setIsOpen} />
-      <p>
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-        lorem ipsum
-      </p>
-
+      <div className="font-mono text-2xl">JetBrains Mono text</div>
+      <div className="font-phantom text-2xl">Phantom Sans text</div>
+      <div className="font-grotesk text-2xl">Space Grotesk text</div>
       {/* Fillout Popup Embed */}
       {isOpen && (
         <FilloutPopupEmbed
@@ -76,4 +33,5 @@ export default function Home() {
       )}
     </div>
   )
+
 }
