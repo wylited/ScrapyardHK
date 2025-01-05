@@ -40,16 +40,15 @@ export default function Hero({ isOpen, setIsOpen }) {
           className="mb-4 drop-shadow-2xl"
         />
 
-        <div className="text-3xl md:text-4xl lg:text-5xl
+        <h1 className="text-3xl md:text-4xl lg:text-5xl
                        font-extrabold text-center mx-16
                        transform hover:scale-105 transition-transform duration-300
-                       align-middle
                        ">
-          The<span className="text-red-400 bg-slate-900 rounded-md"> highschool hackathon </span>where your wacky ideas become<span className="text-blue-400 bg-slate-900 rounded-md"> wonderful inventions. </span>
-        </div>
+          The <span className="text-red-400 font-phantom">highschool hackathon</span> where your wacky ideas become <span className="text-blue-400">wonderful inventions</span>
+        </h1>
 
         <Button
-          className="font-phantom my-4 bg-yellow text-black hover:bg-red-300 hover:drop-shadow-2xl font-bold text-2xl md:text-3xl"
+          className="font-phantom my-2 bg-yellow text-black hover:bg-red-300 hover:drop-shadow-2xl font-bold text-2xl md:text-3xl"
           onClick={() => setIsOpen(true)}
         >
           Sign Up Now!
