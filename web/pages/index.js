@@ -14,6 +14,13 @@ import "@fillout/react/style.css"
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return(
     <div className="min-h-screen flex flex-col bg-[#212121] text-white">
       <Head>
@@ -23,8 +30,27 @@ export default function Home() {
       </Head>
       <Hero isOpen={isOpen} setIsOpen={setIsOpen} />
 
+      <div className="pt-8 py-4 flex justify-center w-full">
+        <Button
+          className="border border-[#e4f0ff] bg-transparent hover:bg-[#e4f0ff] hover:text-black px-4 mx-4 py-3 text-lg"
+          onClick={() => scrollToSection("letter")}>
+          Letter
+        </Button>
+        <Button
+          className="border border-[#e4f0ff] bg-transparent hover:bg-[#e4f0ff] hover:text-black px-4 mx-4 py-3 text-lg"
+          onClick={() => scrollToSection("letter")}>
+          Rundown
+        </Button>
+        <Button
+          className="border border-[#e4f0ff] bg-transparent hover:bg-[#e4f0ff] hover:text-black px-4 mx-4 py-3 text-lg"
+          onClick={() => scrollToSection("letter")}>
+          FAQ
+        </Button>
+      </div>
+
       <BentoGrid/>
 
+      <div id="letter">
       <Paper title="The Scrapyard Calls" date="January 6, 2025" sub={Math.ceil((new Date(new Date().getFullYear(), 2, 15) - new Date()) / (1000 * 60 * 60 * 24)) + (new Date() > new Date(new Date().getFullYear(), 2, 15) ? 365 : 0) + " days left"}>
         <p className="font-bold">Greetings, Young Inventor.</p>
         <br/>
@@ -51,10 +77,14 @@ export default function Home() {
         <p>Are you ready to redefine what’s possible?</p>
         <br/>
         <p className="font-bold">From the Scrapyard Hong Kong team...</p>
+        <p className="font-grotesk italic text-right pr-4">Anson Chung, Dhairya Shah, Alex Climie</p>
+        <p className="font-grotesk italic text-right pr-4">Valentina Banner, Rufus Lee, Linus Choi</p>
+        <p className="font-grotesk italic text-right pr-4">Kevin Wang, Hadrian Lau</p>
       </Paper>
+    </div>
 
 
-      <div className="flex items-center justify-center h-[80vh]">
+      <div id="rundown" className="flex items-center justify-center h-[80vh]">
         <div className="text-2xl md:text-5xl font-bold font-grotesk text-center flex flex-col justify-center max-w-3xl w-full h-full">
           <p className="m-4">The 2 Day Rundown</p>
           <iframe
@@ -67,9 +97,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="text-2xl md:text-5xl text-center mt-8 font-phantom">FAQ</div>
-
-      <FAQ/>
+      <div id="rundown">
+        <div className="text-2xl md:text-5xl text-center mt-8 font-phantom">FAQ</div>
+        <FAQ/>
+      </div>
 
       {/* Fillout Popup Embed */}
       {isOpen && (
