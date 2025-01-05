@@ -4,7 +4,7 @@ import Head from "next/head";
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import Hero from "@/components/hero"
-import Navbar from "@/components/navbar"
+import Paper from "@/components/paper"
 import { FilloutPopupEmbed } from "@fillout/react"
 import "@fillout/react/style.css"
 
@@ -20,9 +20,11 @@ export default function Home() {
       </Head>
       {/* <Navbar isOpen={isOpen} setIsOpen={setIsOpen} /> */}
       <Hero isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className="font-mono text-2xl">JetBrains Mono text</div>
-      <div className="font-phantom text-2xl">Phantom Sans text</div>
-      <div className="font-grotesk text-2xl">Space Grotesk text</div>
+
+      <Paper title="The Scrapyard Calls">
+        <p>Greetings Inventor.</p>
+        <p></p>
+      </Paper>
       {/* Fillout Popup Embed */}
       {isOpen && (
         <FilloutPopupEmbed
