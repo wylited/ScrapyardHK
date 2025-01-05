@@ -7,6 +7,7 @@ import Hero from "@/components/hero"
 import Paper from "@/components/paper"
 import RundownSchedule from "@/components/rundown"
 import BentoGrid from "@/components/bento"
+import FAQ from "@/components/faq"
 import { FilloutPopupEmbed } from "@fillout/react"
 import "@fillout/react/style.css"
 
@@ -52,9 +53,10 @@ export default function Home() {
         <p className="font-bold">From the Scrapyard Hong Kong team...</p>
       </Paper>
 
+
       <div className="flex items-center justify-center h-[80vh]">
         <div className="text-2xl md:text-5xl font-bold font-grotesk text-center flex flex-col justify-center max-w-3xl w-full h-full">
-          <p className="m-4">the 2 Day Rundown</p>
+          <p className="m-4">The 2 Day Rundown</p>
           <iframe
             src="https://calendar.google.com/calendar/embed?height=400&wkst=1&ctz=Asia%2FHong_Kong&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&showDate=0&showNav=0&title=Scrapyard%20HK&src=YzY3ZmE2YjE0OWU5Mzk2OGM1Y2ZmMmNiZjg3MTE0MDYwY2JhMGNiNGI4N2M3OGI3ZGNmZjFlMjkwNTkyNGI1M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E"
             style={{ borderWidth: 0 }}
@@ -64,6 +66,10 @@ export default function Home() {
           ></iframe>
         </div>
       </div>
+
+      <div className="text-2xl md:text-5xl text-center mt-8 font-phantom">FAQ</div>
+
+      <FAQ/>
 
       {/* Fillout Popup Embed */}
       {isOpen && (
