@@ -3,13 +3,15 @@ import { FC, ReactNode } from 'react';
 
 interface PaperProps {
   title?: string;
+  date?: string;
+  sub?: string;
   children?: ReactNode;
 }
 
-const Paper: FC<PaperProps> = ({ title, children }) => {
+const Paper: FC<PaperProps> = ({ title, date, sub, children }) => {
   return (
     <div className="w-full h-full min-h-screen bg-[#212121] my-4">
-      <div className="max-w-3xl mx-auto bg-white rounded-md">
+      <div className="max-w-3xl mx-2 md:mx-auto bg-white rounded-md">
         <div
           className="w-full bg-white rounded-md"
           style={{
@@ -17,25 +19,33 @@ const Paper: FC<PaperProps> = ({ title, children }) => {
             backgroundSize: '100% 1.2em',
           }}
         >
-          {/* Header section with title */}
+          {/* Header section with title and date */}
           <div
-            className="h-16 px-20 py-4"
+            className="h-16 pl-8 py-4 pr-5"
             style={{
-              background: 'linear-gradient(90deg, transparent 79px, #ec7063 79px, #ec7063 81px, transparent 81px)',
+              background: 'linear-gradient(90deg, transparent 30px, #ec7063 32px, #ec7063 32px, transparent 32px)',
               backgroundSize: '100% 1.2em',
             }}
           >
-            {title && (
-              <h1 className="text-3xl ml-1 text-black font-grotesk">{title}</h1>
-            )}
+            <div className="flex justify-between items-center">
+              {title && (
+                <h1 className="text-xl md:text-2xl lg:text-3xl ml-1 text-black font-grotesk">{title}</h1>
+              )}
+              {date && (
+                <div className="flex flex-col">
+                <span className="text-xs md:text-sm text-gray-600 font-grotesk">{date}</span>
+                <span className="text-xs md:text-sm text-gray-600 font-grotesk">{sub}</span>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Content section with ruled lines */}
           <div
-            className="min-h-[500px] px-[5.2rem] py-5 font-phantom text-black leading-[1.25em]"
+            className="min-h-[500px] pl-10 py-6 font-phantom text-black text-lg leading-[1.25em] md:text-xl md:py-7 md:leading-[1.25em] "
             style={{
               background: `
-                linear-gradient(90deg, transparent 79px, #ec7063 79px, #ec7063 81px, transparent 81px),
+                linear-gradient(90deg, transparent 30px, #ec7063 32px, #ec7063 32px, transparent 32px),
                 linear-gradient(#85c1e9 1px, transparent 1px)
               `,
               backgroundSize: '100% 1.25em',
