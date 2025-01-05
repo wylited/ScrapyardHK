@@ -11,7 +11,7 @@ interface PaperProps {
 const Paper: FC<PaperProps> = ({ title, date, sub, children }) => {
   return (
     <div className="w-full h-full min-h-screen bg-[#212121] my-4">
-      <div className="max-w-3xl mx-2 md:mx-auto bg-white rounded-md">
+      <div className="max-w-3xl mx-2 md:mx-auto bg-[#f2f2f2] rounded-md">
         <div
           className="w-full bg-white rounded-md"
           style={{
