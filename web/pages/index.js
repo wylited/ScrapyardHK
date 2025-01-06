@@ -21,6 +21,18 @@ export default function Home() {
     }
   };
 
+  useEffect(() => {
+    console.log(` ###   ### ###   ##  ###  #   #  ##  ###  ###   
+#     #  # #  #  ##  #  # #   #  ##  #  # #  #  
+#    #     #  # #  # #  #  # #  #  # #  # #   # 
+ ##  #     ###  #  # ###    #   #  # ###  #   # 
+   # #     # #  #### #      #   #### # #  #   # 
+   #  #    #  # #  # #      #   #  # #  # #  #  
+###    ### #  # #  # #      #   #  # #  # ### 
+
+Hey hacker! Register for Scrapyard Hong Kong at https://scrapyard.hk/register. We hope to see you there!`)
+  }, [])
+
   return(
     <div className="min-h-screen flex flex-col bg-[#212121] text-white">
       <Head>
