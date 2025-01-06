@@ -66,8 +66,8 @@ Hey hacker! Register for Scrapyard Hong Kong at https://scrapyard.hk/register. W
   return(
     <div className="min-h-screen flex flex-col bg-[#212121] text-white">
       <Head>
-        <title>Scrapyard HK</title>
-        <meta name="description" content="Scrapyard HK Hackathon Website" />
+        <title>Scrapyard Hong Kong</title>
+        <meta name="description" content="Join over 250 visionaries for 2 days at MiT Innovation Node. Build something extraordinary from the ordinary." />
         <link rel="icon" href="/favicon.ico" />
         <script type="application/ld+json">
           {JSON.stringify(eventJsonLd)}
