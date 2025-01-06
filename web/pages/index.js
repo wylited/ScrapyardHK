@@ -1,7 +1,7 @@
 'use client'
 
 import Head from "next/head";
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import Hero from "@/components/hero"
 import Paper from "@/components/paper"
@@ -18,6 +18,36 @@ export default function Home() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const eventJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Scrapyard Hong Kong",
+    "startDate": "2025-03-15T09:00:00+08:00",
+    "endDate": "2025-03-16T18:00:00+08:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "MiT Innovation Node",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "78 Tat Chee Ave, Kowloon Tong",
+        "addressLocality": "Hong Kong",
+        "postalCode": "000000",
+        "addressCountry": "HK"
+      }
+    },
+    "image": [
+      "https://scrapyard.hk/working.JPG"
+    ],
+    "description": "Join over 250 visionaries for 2 days at MiT Innovation Node. Build something extraordinary from the ordinary.",
+    "organizer": {
+      "@type": "Organization",
+      "name": "Scrapyard Hong Kong",
+      "url": "https://scrapyard.hk"
     }
   };
 
@@ -39,6 +69,9 @@ Hey hacker! Register for Scrapyard Hong Kong at https://scrapyard.hk/register. W
         <title>Scrapyard HK</title>
         <meta name="description" content="Scrapyard HK Hackathon Website" />
         <link rel="icon" href="/favicon.ico" />
+        <script type="application/ld+json">
+          {JSON.stringify(eventJsonLd)}
+        </script>
       </Head>
       <Hero isOpen={isOpen} setIsOpen={setIsOpen} />
 
