@@ -83,12 +83,12 @@ Hey hacker! Register for Scrapyard Hong Kong at https://scrapyard.hk/register. W
         </Button>
         <Button
           className="border border-[#e4f0ff] bg-transparent hover:bg-[#e4f0ff] hover:text-black px-4 mx-4 py-3 text-lg"
-          onClick={() => scrollToSection("letter")}>
+          onClick={() => scrollToSection("rundown")}>
           Rundown
         </Button>
         <Button
           className="border border-[#e4f0ff] bg-transparent hover:bg-[#e4f0ff] hover:text-black px-4 mx-4 py-3 text-lg"
-          onClick={() => scrollToSection("letter")}>
+          onClick={() => scrollToSection("faq")}>
           FAQ
         </Button>
       </div>
@@ -142,7 +142,7 @@ Hey hacker! Register for Scrapyard Hong Kong at https://scrapyard.hk/register. W
         </div>
       </div>
 
-      <div id="rundown">
+      <div id="faq">
         <div className="text-2xl md:text-5xl text-center mt-8 font-phantom">FAQ</div>
         <FAQ/>
       </div>
