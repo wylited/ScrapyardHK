@@ -10,12 +10,13 @@ import BentoGrid from "@/components/bento"
 import FAQ from "@/components/faq"
 import { FilloutPopupEmbed } from "@fillout/react"
 import "@fillout/react/style.css"
-import { useTranslation } from 'next-i18next'; // P8b68
+import { useTranslation } from 'next-i18next';
+import { i18n } from 'next-i18next';
 
 export default function Home() {
-  const { t } = useTranslation('common'); // P9425
+  const { t } = useTranslation('common');
   const [isOpen, setIsOpen] = useState(false)
-  const [showLanguagePopup, setShowLanguagePopup] = useState(true); // P81f4
+  const [showLanguagePopup, setShowLanguagePopup] = useState(true);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
