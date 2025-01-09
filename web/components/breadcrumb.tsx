@@ -1,5 +1,8 @@
-// components/breadcrumb.jsx
+import { useTranslation } from 'next-i18next';
+
 const Breadcrumb = () => {
+  const { t } = useTranslation('common');
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -16,7 +19,7 @@ const Breadcrumb = () => {
               onClick={() => scrollToSection('letter')}
               className="text-white/60 hover:text-white transition-colors"
             >
-              Letter
+              {t('Letter')}
             </button>
           </li>
           <li className="text-white/60">•</li>
@@ -25,7 +28,7 @@ const Breadcrumb = () => {
               onClick={() => scrollToSection('rundown')}
               className="text-white/60 hover:text-white transition-colors"
             >
-              Rundown
+              {t('Rundown')}
             </button>
           </li>
           <li className="text-white/60">•</li>
@@ -34,7 +37,7 @@ const Breadcrumb = () => {
               onClick={() => scrollToSection('faq')}
               className="text-white/60 hover:text-white transition-colors"
             >
-              FAQ
+              {t('FAQ')}
             </button>
           </li>
         </ul>

@@ -4,6 +4,7 @@ import "@fontsource/space-grotesk/index.css";
 
 import posthog from "posthog-js"
 import { PostHogProvider } from 'posthog-js/react'
+import { appWithTranslation } from 'next-i18next'; // P3c70
 
 if (typeof window !== 'undefined') { // checks that we are client-side
   posthog.init("phc_y6fWOgMgk8mhVXASbsIZAfaqJ0c4Hu0Z4JW7WY1AwbS", {
@@ -33,7 +34,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 
-export default function App(
+function App(
     { Component, pageProps: { session, ...pageProps } }
 ) {
     return (
@@ -44,3 +45,5 @@ export default function App(
         </>
     )
 }
+
+export default appWithTranslation(App); // Pe08e

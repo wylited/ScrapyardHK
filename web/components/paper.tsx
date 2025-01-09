@@ -1,5 +1,5 @@
-// components/Paper.tsx
 import { FC, ReactNode } from 'react';
+import { useTranslation } from 'next-i18next';
 
 interface PaperProps {
   title?: string;
@@ -9,6 +9,8 @@ interface PaperProps {
 }
 
 const Paper: FC<PaperProps> = ({ title, date, sub, children }) => {
+  const { t } = useTranslation('common');
+
   return (
     <div className="w-full h-full min-h-screen bg-[#212121] my-4">
       <div className="max-w-3xl mx-2 md:mx-auto bg-[#f2f2f2] rounded-md">
@@ -29,12 +31,12 @@ const Paper: FC<PaperProps> = ({ title, date, sub, children }) => {
           >
             <div className="flex justify-between items-center">
               {title && (
-                <h1 className="text-xl md:text-2xl lg:text-3xl ml-1 text-black font-grotesk">{title}</h1>
+                <h1 className="text-xl md:text-2xl lg:text-3xl ml-1 text-black font-grotesk">{t(title)}</h1>
               )}
               {date && (
                 <div className="flex flex-col">
-                <span className="text-xs md:text-sm text-gray-600 font-grotesk">{date}</span>
-                <span className="text-xs md:text-sm text-gray-600 font-grotesk">{sub}</span>
+                <span className="text-xs md:text-sm text-gray-600 font-grotesk">{t(date)}</span>
+                <span className="text-xs md:text-sm text-gray-600 font-grotesk">{t(sub)}</span>
                 </div>
               )}
             </div>

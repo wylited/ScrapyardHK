@@ -1,5 +1,5 @@
-// components/RundownSchedule.tsx
 import React from 'react';
+import { useTranslation } from 'next-i18next';
 
 interface ScheduleItem {
   startTime: string;
@@ -36,20 +36,22 @@ const schedule: ScheduleItem[] = [
 ];
 
 const RundownSchedule = () => {
+  const { t } = useTranslation('common');
+
   return (
     <div className="max-w-4xl mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-8 text-center">RUNDOWN</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">{t('Rundown')}</h1>
 
       {[1, 2].map((day) => (
         <div key={day} className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-600">DAY {day}</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-blue-600">{t('DAY')} {day}</h2>
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <table className="min-w-full">
               <thead>
                 <tr className="bg-gray-100">
-                  <th className="px-4 py-3 text-left text-sm font-semibold">Start</th>
-                  <th className="px-4 py-3 text-left text-sm font-semibold">End</th>
-                  <th className="px-4 py-3 text-left text-sm font-semibold">Activity</th>
+                  <th className="px-4 py-3 text-left text-sm font-semibold">{t('Start')}</th>
+                  <th className="px-4 py-3 text-left text-sm font-semibold">{t('End')}</th>
+                  <th className="px-4 py-3 text-left text-sm font-semibold">{t('Activity')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -66,7 +68,7 @@ const RundownSchedule = () => {
                     >
                       <td className="px-4 py-3 text-sm">{item.startTime}</td>
                       <td className="px-4 py-3 text-sm">{item.endTime}</td>
-                      <td className="px-4 py-3 text-sm">{item.activity}</td>
+                      <td className="px-4 py-3 text-sm">{t(item.activity)}</td>
                     </tr>
                   ))}
               </tbody>
