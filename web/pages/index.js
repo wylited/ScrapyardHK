@@ -1,7 +1,7 @@
 'use client'
 
 import Head from "next/head";
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import Hero from "@/components/hero"
 import Paper from "@/components/paper"
@@ -21,12 +21,57 @@ export default function Home() {
     }
   };
 
+  const eventJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Scrapyard Hong Kong",
+    "startDate": "2025-03-15T09:00:00+08:00",
+    "endDate": "2025-03-16T18:00:00+08:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "South Island School",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "78 Tat Chee Ave, Kowloon Tong",
+        "addressLocality": "Hong Kong",
+        "postalCode": "000000",
+        "addressCountry": "HK"
+      }
+    },
+    "image": [
+      "https://scrapyard.hk/working.JPG"
+    ],
+    "description": "Join over 250 visionaries for 2 days at a safehouse. Build something extraordinary from the ordinary.",
+    "organizer": {
+      "@type": "Organization",
+      "name": "Scrapyard Hong Kong",
+      "url": "https://scrapyard.hk"
+    }
+  };
+
+  useEffect(() => {
+    console.log(` ###   ### ###   ##  ###  #   #  ##  ###  ###   
+#     #  # #  #  ##  #  # #   #  ##  #  # #  #  
+#    #     #  # #  # #  #  # #  #  # #  # #   # 
+ ##  #     ###  #  # ###    #   #  # ###  #   # 
+   # #     # #  #### #      #   #### # #  #   # 
+   #  #    #  # #  # #      #   #  # #  # #  #  
+###    ### #  # #  # #      #   #  # #  # ### 
+
+Hey hacker! Register for Scrapyard Hong Kong at https://scrapyard.hk/register. We hope to see you there!`)
+  }, [])
+
   return(
     <div className="min-h-screen flex flex-col bg-[#212121] text-white">
       <Head>
-        <title>Scrapyard HK</title>
-        <meta name="description" content="Scrapyard HK Hackathon Website" />
+        <title>Scrapyard Hong Kong</title>
+        <meta name="description" content="Join over 250 visionaries for 2 days at TBC. Build something extraordinary from the ordinary." />
         <link rel="icon" href="/favicon.ico" />
+        <script type="application/ld+json">
+          {JSON.stringify(eventJsonLd)}
+        </script>
       </Head>
       <Hero isOpen={isOpen} setIsOpen={setIsOpen} />
 
@@ -38,12 +83,12 @@ export default function Home() {
         </Button>
         <Button
           className="border border-[#e4f0ff] bg-transparent hover:bg-[#e4f0ff] hover:text-black px-4 mx-4 py-3 text-lg"
-          onClick={() => scrollToSection("letter")}>
+          onClick={() => scrollToSection("rundown")}>
           Rundown
         </Button>
         <Button
           className="border border-[#e4f0ff] bg-transparent hover:bg-[#e4f0ff] hover:text-black px-4 mx-4 py-3 text-lg"
-          onClick={() => scrollToSection("letter")}>
+          onClick={() => scrollToSection("faq")}>
           FAQ
         </Button>
       </div>
@@ -62,7 +107,7 @@ export default function Home() {
         <br/>
         <p>One thing remains unchanged: the power of imagination. Circuits still spark, code still compiles, and creativity still flourishes.</p>
         <br/>
-        <p>Join over 250 visionaries like yourself for 2 days at MiT Innovation Node.</p>
+        <p>Join over 250 visionaries like yourself for 2 days at Venue TBC.</p>
         <br/>
         <p>Build something extraordinary from the ordinary. Transform the discarded into the remarkable.</p>
         <br/>
@@ -97,7 +142,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="rundown">
+      <div id="faq">
         <div className="text-2xl md:text-5xl text-center mt-8 font-phantom">FAQ</div>
         <FAQ/>
       </div>
@@ -107,6 +152,7 @@ export default function Home() {
         <FilloutPopupEmbed
           filloutId="fopmQDDwgRus"
           dynamicResize
+          inheritParameters
           onClose={() => setIsOpen(false)}
         />
       )}

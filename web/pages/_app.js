@@ -4,6 +4,8 @@ import "@fontsource/space-grotesk/index.css";
 
 import posthog from "posthog-js"
 import { PostHogProvider } from 'posthog-js/react'
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 if (typeof window !== 'undefined') { // checks that we are client-side
   posthog.init("phc_y6fWOgMgk8mhVXASbsIZAfaqJ0c4Hu0Z4JW7WY1AwbS", {
@@ -36,6 +38,23 @@ const spaceGrotesk = Space_Grotesk({
 export default function App(
     { Component, pageProps: { session, ...pageProps } }
 ) {
+    const router = useRouter();
+
+    useEffect(() => {
+        const { f, ...otherQuery } = router.query;
+        if (f) {
+            const newQuery = { ...otherQuery, utm_source: f };
+            router.replace(
+                {
+                    pathname: router.pathname,
+                    query: newQuery,
+                },
+                undefined,
+                { shallow: true }
+            );
+        }
+    }, [router.query]);
+
     return (
         <>
             <PostHogProvider client={posthog}>
