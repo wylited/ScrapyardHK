@@ -8,6 +8,7 @@ import Paper from "@/components/paper"
 import RundownSchedule from "@/components/rundown"
 import BentoGrid from "@/components/bento"
 import FAQ from "@/components/faq"
+import LoginButton from "@/components/login_button"
 import { FilloutPopupEmbed } from "@fillout/react"
 import "@fillout/react/style.css"
 
@@ -73,6 +74,13 @@ Hey hacker! Register for Scrapyard Hong Kong at https://scrapyard.hk/register. W
           {JSON.stringify(eventJsonLd)}
         </script>
       </Head>
+      <div className="sticky top-2 z-50 w-full h-0">
+        <div className="container w-full px-4">
+          <div className="">
+            <LoginButton />
+          </div>
+        </div>
+      </div>
       <Hero isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className="pt-8 py-4 flex justify-center w-full">
@@ -96,6 +104,7 @@ Hey hacker! Register for Scrapyard Hong Kong at https://scrapyard.hk/register. W
       <BentoGrid/>
 
       <div id="letter">
+      <div className="text-2xl md:text-5xl text-center mt-2 font-phantom">A letter has arrived, traveller</div>
       <Paper title="The Scrapyard Calls" date="January 6, 2025" sub={Math.ceil((new Date(new Date().getFullYear(), 2, 15) - new Date()) / (1000 * 60 * 60 * 24)) + (new Date() > new Date(new Date().getFullYear(), 2, 15) ? 365 : 0) + " days left"}>
         <p className="font-bold">Greetings, Young Inventor.</p>
         <br/>
@@ -122,15 +131,15 @@ Hey hacker! Register for Scrapyard Hong Kong at https://scrapyard.hk/register. W
         <p>Are you ready to redefine what’s possible?</p>
         <br/>
         <p className="font-bold">From the Scrapyard Hong Kong team...</p>
-        <p className="font-grotesk italic text-right pr-4">Anson Chung, Dhairya Shah, Alex Climie</p>
-        <p className="font-grotesk italic text-right pr-4">Valentina Banner, Rufus Lee, Linus Choi</p>
-        <p className="font-grotesk italic text-right pr-4">Kevin Wang, Hadrian Lau</p>
+        <p className="font-grotesk italic text-right pr-4">Anson Chung, Dhairya Shah, Valentina Banner</p>
+        <p className="font-grotesk italic text-right pr-4">Alex Climie, Kevin Wang, Rufus Lee, Linus Choi</p>
+        <p className="font-grotesk italic text-right pr-4">Madelyn Lee, Hadrian Lau, Aelita Chan</p>
       </Paper>
     </div>
 
 
       <div id="rundown" className="flex items-center justify-center h-[80vh]">
-        <div className="text-2xl md:text-5xl font-bold font-grotesk text-center flex flex-col justify-center max-w-3xl w-full h-full">
+        <div className="text-2xl md:text-5xl font-phantom text-center flex flex-col justify-center max-w-3xl w-full h-full">
           <p className="m-4">The 2 Day Rundown</p>
           <iframe
             src="https://calendar.google.com/calendar/embed?height=400&wkst=1&ctz=Asia%2FHong_Kong&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&showDate=0&showNav=0&title=Scrapyard%20HK&src=YzY3ZmE2YjE0OWU5Mzk2OGM1Y2ZmMmNiZjg3MTE0MDYwY2JhMGNiNGI4N2M3OGI3ZGNmZjFlMjkwNTkyNGI1M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E&hl=en"
@@ -143,7 +152,7 @@ Hey hacker! Register for Scrapyard Hong Kong at https://scrapyard.hk/register. W
       </div>
 
       <div id="faq">
-        <div className="text-2xl md:text-5xl text-center mt-8 font-phantom">FAQ</div>
+        <div className="text-2xl md:text-5xl text-center mt-8 font-phantom">Frequently Asked Questions</div>
         <FAQ/>
       </div>
 

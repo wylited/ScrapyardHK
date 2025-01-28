@@ -1,4 +1,5 @@
-// components/breadcrumb.jsx
+// components/breadcrumb.tsx
+
 const Breadcrumb = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
