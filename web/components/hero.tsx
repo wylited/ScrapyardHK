@@ -59,7 +59,7 @@ export default function Hero({ isOpen, setIsOpen }) {
           Sign Up Now!
         </Button>
 
-        <p className="text-2xl font-grotesk">March 15-16  @ {/* <a href="https://maps.app.goo.gl/BRhV8SoBx5p19r6n6" className="underline hover:text-cyan-200" target="_blank">HKPC Building</a> */}</p>
+        <p className="text-2xl font-grotesk">March 15-16 {/*@ <a href="https://maps.app.goo.gl/BRhV8SoBx5p19r6n6" className="underline hover:text-cyan-200" target="_blank">HKPC Building</a> */}</p>
       </div>
     </div>
   )
