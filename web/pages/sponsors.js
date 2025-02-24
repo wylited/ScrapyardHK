@@ -47,7 +47,7 @@ export default function Sponsors() {
 
     return (
         <div className="min-h-screen bg-[#212121] text-white font-phantom">
-            <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+            <div className="container mx-auto px-4 py-4 sm:px-6 lg:px-8">
                 {/* Hero Section */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -113,7 +113,7 @@ export default function Sponsors() {
                     transition={{ duration: 0.5, delay: 0.8 }}
                     className="mt-24 text-center"
                 >
-                    <Card className="p-8 bg-gradient-to-b from-[#111111] to-[#212121] border-[#111111]">
+                    <Card className="p-4 bg-gradient-to-b from-[#212121] to-[#111111] border-[#212121]">
                         <h2 className="text-gray-200 text-2xl md:text-3xl font-bold mb-4">Become a Sponsor</h2>
                         <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
                             Join us in shaping the future of technology. Download our prospectus to learn about sponsorship
