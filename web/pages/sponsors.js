@@ -30,7 +30,7 @@ export default function Sponsors() {
             borderColor: "border-amber-500/20",
             icon: <Trophy className="h-6 w-6" />,
             sponsors: [
-                { name: "BSD Education", logo: "/placeholder.svg?height=80&width=200" },
+                { name: "BSD Education", logo: "/bsd.png" },
             ],
         },
         {
@@ -40,7 +40,7 @@ export default function Sponsors() {
             borderColor: "border-purple-500/20",
             icon: <Trophy className="h-6 w-6" />,
             sponsors: [
-                { name: "Cobo Academy", logo: "/placeholder.svg?height=80&width=200" },
+                { name: "Cobo Academy", logo: "/cobo.png" },
             ],
         },
     ]
