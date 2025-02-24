@@ -131,7 +131,7 @@ Hey hacker! Register for Scrapyard Hong Kong at https://scrapyard.hk/register. W
         <p>Are you ready to redefine what’s possible?</p>
         <br/>
         <p className="font-bold">From the Scrapyard Hong Kong team...</p>
-        <p className="font-grotesk italic text-right pr-4">Anson Chung, Dhairya Shah, Valentina Banner</p>
+        <p className="font-grotesk italic text-right pr-4">Valentina Banner, Dhairya Shah</p>
         <p className="font-grotesk italic text-right pr-4">Alex Climie, Kevin Wang, Rufus Lee, Linus Choi</p>
         <p className="font-grotesk italic text-right pr-4">Madelyn Lee, Hadrian Lau, Aelita Chan</p>
       </Paper>

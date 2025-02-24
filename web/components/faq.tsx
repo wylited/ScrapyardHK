@@ -8,7 +8,7 @@ export default function FAQ() {
     },
     {
       question: "My parents are concerned",
-      answer: "Our hackathon will be supervised by adults and professionals over the two days. Food and Safety procedures will be followed according to HKPC's guidelines."
+      answer: "Our hackathon will be supervised by adults and professionals over the two days. Food and Safety procedures will be followed according to the venues guidelines."
     },
           {
       question: "What should I bring?",
